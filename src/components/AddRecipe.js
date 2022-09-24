@@ -4,7 +4,7 @@ import "../styles/AddRecipe.css";
 import { useNavigate } from "react-router-dom";
 function AddRecipe({ user, recipeData }) {
   const navigate = useNavigate();
-  const url = "http://localhost:3001/recipes";
+  const url = "https://safe-beach-82078.herokuapp.com/recipes";
   const [ingArray, setIngArray] = useState("");
   const defalutImage =
     "https://cdn1.iconfinder.com/data/icons/hotel-restaurant/512/16-512.png";

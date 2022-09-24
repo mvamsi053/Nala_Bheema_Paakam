@@ -34,7 +34,7 @@ function Main() {
   const [recipes, setRecipe] = useState([]);
   const [user, setUser] = useState({});
   useEffect(() => {
-    axios.get("http://localhost:3001/recipes").then((res) => {
+    axios.get("https://safe-beach-82078.herokuapp.com/recipes").then((res) => {
       setRecipe(res.data);
     });
   }, [useParams]);

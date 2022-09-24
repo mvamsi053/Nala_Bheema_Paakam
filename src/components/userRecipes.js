@@ -9,7 +9,7 @@ function UserRecipes({ userid }) {
   console.log(userid);
   const [recipes, setRecipe] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3001/recipes").then((res) => {
+    axios.get("https://safe-beach-82078.herokuapp.com/recipes").then((res) => {
       setRecipe(res.data);
     });
   }, []);
@@ -18,11 +18,15 @@ function UserRecipes({ userid }) {
     console.log(id);
   };
   const handledelete = (id) => {
-    axios.delete(`http://localhost:3001/recipes/${id}`).then(() => {
-      axios.get("http://localhost:3001/recipes").then((res) => {
-        setRecipe(res.data);
+    axios
+      .delete(`https://safe-beach-82078.herokuapp.com/recipes/${id}`)
+      .then(() => {
+        axios
+          .get("https://safe-beach-82078.herokuapp.com/recipes")
+          .then((res) => {
+            setRecipe(res.data);
+          });
       });
-    });
   };
   return (
     // <div className="recipe-list row justify-content-center">

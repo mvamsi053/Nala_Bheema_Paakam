@@ -13,7 +13,7 @@ function UpdateRecipe({ user, recipeData }) {
   const [isSubmit, setIsSubmit] = useState(false);
   const updateRecipe = recipeData[localStorage.getItem("ID")];
   console.log(updateRecipe);
-  const url = `http://localhost:3001/recipes/${updateRecipe._id}`;
+  const url = `https://safe-beach-82078.herokuapp.com/recipes/${updateRecipe._id}`;
 
   const [addrecipe, setAddRecipe] = useState({
     id: updateRecipe.id,
