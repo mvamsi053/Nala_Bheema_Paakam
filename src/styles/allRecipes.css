@@ -1,0 +1,59 @@
+.allRecipes{
+    background-color: #e0e0e0;
+   height: 100vh;
+   
+   
+}
+.allrecipecard{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        min-width: 20vw;
+        max-width: 20vw;
+    
+        border-radius: 12px;
+}
+@media screen and (min-width:0px) {
+    .images {
+
+        min-width: 60vw;
+        max-width: 60vw;
+
+    }
+
+    .allrecipecard {
+        min-width: 60vw;
+        max-width: 60vw;
+        margin-left: 20%;
+        transform: translateY(-35%);
+    }
+}
+
+@media screen and (min-width:520px) {
+    .images {
+
+        min-width: 30vw;
+        max-width: 30vw;
+
+    }
+
+    .allrecipecard {
+        min-width: 30vw;
+        max-width: 30vw;
+        margin-left: 10%;
+        transform: translateY(-15%);
+    }
+}
+
+@media screen and (min-width:952px) {
+    .images {
+
+        min-width: 20vw;
+        max-width: 20vw;
+
+    }
+
+    .allrecipecard {
+        min-width: 20vw;
+        max-width: 20vw;
+    }
+
+}

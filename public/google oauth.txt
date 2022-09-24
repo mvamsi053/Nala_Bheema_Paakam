@@ -1,0 +1,3 @@
+clientid:17925617582-ge35q2hbkmbauk9o9qcqb12cjpd4c4vt.apps.googleusercontent.com
+
+client_secret: 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

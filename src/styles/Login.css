@@ -1,0 +1,31 @@
+
+#SignInDiv{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    background-color: white;
+    
+    
+   
+   
+}h4{
+    background-color: white;
+}
+#login{
+    margin: auto;
+    margin-top: 5%;
+   width: 90%;
+   background-color: white;
+   max-width: 440px;
+   color:#d9534f;
+    font-family: 'Open Sans',
+            sans-serif;
+    text-align: center;
+    padding: 50px 50px;
+    border: 2px solid #ffad60;;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
