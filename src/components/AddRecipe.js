@@ -57,11 +57,12 @@ function AddRecipe({ user, recipeData }) {
         ingredients: addrecipe.ingredients,
         procedure: addrecipe.procedure,
         author_id: addrecipe.author_id,
-      });
+      }).then((res) => {
+          console.log(res);
+          navigate("/main/user");
+          navigate(0);
+        });   
 
-      console.log(addrecipe);
-      navigate("/main/user");
-      navigate(0);
     }
   }, [formErrors]);
 
