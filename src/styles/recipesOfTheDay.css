@@ -152,7 +152,7 @@ transform: translateX(0);
     width: 520px;
   }
   .card {
-      width: 30vw;
+      width: 20vw;
   }
   .swiper-pagination{
     display: none;
