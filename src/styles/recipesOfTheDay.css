@@ -30,6 +30,7 @@
 
 .card{
     flex: 1;
+    width:20vw;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 12px;
     text-align: center;
@@ -152,7 +153,7 @@ transform: translateX(0);
     width: 520px;
   }
   .card {
-      width: 100px;
+      width: 30vw;
   }
   .swiper-pagination{
     display: none;
