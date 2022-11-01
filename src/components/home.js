@@ -42,7 +42,7 @@ function Home() {
       <a style={{ textDecoration: "none" }} href="/Main">
         <button className="next btn btn-sm mx-auto ">
           <span class="material-symbols-outlined  ">arrow_right_alt</span>
-          Vist our recipes
+          Visit our recipes
         </button>
       </a>
       <Icons />
