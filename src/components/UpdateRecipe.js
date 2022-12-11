@@ -42,6 +42,7 @@ function UpdateRecipe({ user, recipeData }) {
       isSubmit &&
       addrecipe.author_id
     ) {
+<<<<<<< HEAD
       axios
         .put(url, {
           id: addrecipe.id,
@@ -57,11 +58,31 @@ function UpdateRecipe({ user, recipeData }) {
           author_id: addrecipe.author_id,
         })
         .then((res) => {
+=======
+      axios.put(url, {
+        id: addrecipe.id,
+        recipeName: addrecipe.recipeName,
+        image: addrecipe.image,
+        category: addrecipe.category,
+        authorName: addrecipe.authorName,
+        cookingTime: addrecipe.cookingTime,
+        noOfServings: addrecipe.noOfServings,
+        about: addrecipe.about,
+        ingredients: addrecipe.ingredients,
+        procedure: addrecipe.procedure,
+        author_id: addrecipe.author_id,
+      }).then((res) => {
+>>>>>>> 0068d248851d9b9597afae45aa48446e23ca3d47
           console.log(addrecipe);
           console.log(res);
           navigate("/main/user");
           navigate(0);
         });
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> 0068d248851d9b9597afae45aa48446e23ca3d47
     }
   }, [formErrors]);
 
