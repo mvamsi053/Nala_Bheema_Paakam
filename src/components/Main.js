@@ -5,7 +5,7 @@ import axios from "axios";
 
 import RecipesOfTheDay from "./RecipesOfTheDay";
 // URL Server
-// https://safe-beach-82078.herokuapp.com/recipes
+// https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes
 
 import {
   BrowserRouter,
@@ -34,9 +34,11 @@ function Main() {
   const [recipes, setRecipe] = useState([]);
   const [user, setUser] = useState({});
   useEffect(() => {
-    axios.get("https://safe-beach-82078.herokuapp.com/recipes").then((res) => {
-      setRecipe(res.data);
-    });
+    axios
+      .get("https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes")
+      .then((res) => {
+        setRecipe(res.data);
+      });
   }, [useParams]);
 
   console.log(recipes);

@@ -4,7 +4,7 @@ import "../styles/AddRecipe.css";
 import { useNavigate } from "react-router-dom";
 function AddRecipe({ user, recipeData }) {
   const navigate = useNavigate();
-  const url = "https://safe-beach-82078.herokuapp.com/recipes";
+  const url = "https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes";
   const [ingArray, setIngArray] = useState("");
   const defalutImage =
     "https://cdn1.iconfinder.com/data/icons/hotel-restaurant/512/16-512.png";
@@ -45,23 +45,27 @@ function AddRecipe({ user, recipeData }) {
       isSubmit &&
       addrecipe.author_id
     ) {
-      axios.post(url, {
-        id: addrecipe.id,
-        recipeName: addrecipe.recipeName,
-        image: addrecipe.image,
-        category: addrecipe.category,
-        authorName: addrecipe.authorName,
-        cookingTime: addrecipe.cookingTime,
-        noOfServings: addrecipe.noOfServings,
-        about: addrecipe.about,
-        ingredients: addrecipe.ingredients,
-        procedure: addrecipe.procedure,
-        author_id: addrecipe.author_id,
-      });
+      axios
+        .post(url, {
+          id: addrecipe.id,
+          recipeName: addrecipe.recipeName,
+          image: addrecipe.image,
+          category: addrecipe.category,
+          authorName: addrecipe.authorName,
+          cookingTime: addrecipe.cookingTime,
+          noOfServings: addrecipe.noOfServings,
+          about: addrecipe.about,
+          ingredients: addrecipe.ingredients,
+          procedure: addrecipe.procedure,
+          author_id: addrecipe.author_id,
+        })
+        .then((res) => {
+          console.log(res);
+          navigate("/main/user");
+          navigate(0);
+        });
 
       console.log(addrecipe);
-      navigate("/main/user");
-      navigate(0);
     }
   }, [formErrors]);
 

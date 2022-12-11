@@ -13,7 +13,7 @@ function UpdateRecipe({ user, recipeData }) {
   const [isSubmit, setIsSubmit] = useState(false);
   const updateRecipe = recipeData[localStorage.getItem("ID")];
   console.log(updateRecipe);
-  const url = `https://safe-beach-82078.herokuapp.com/recipes/${updateRecipe._id}`;
+  const url = `https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes/${updateRecipe._id}`;
 
   const [addrecipe, setAddRecipe] = useState({
     id: updateRecipe.id,
@@ -42,23 +42,26 @@ function UpdateRecipe({ user, recipeData }) {
       isSubmit &&
       addrecipe.author_id
     ) {
-      axios.put(url, {
-        id: addrecipe.id,
-        recipeName: addrecipe.recipeName,
-        image: addrecipe.image,
-        category: addrecipe.category,
-        authorName: addrecipe.authorName,
-        cookingTime: addrecipe.cookingTime,
-        noOfServings: addrecipe.noOfServings,
-        about: addrecipe.about,
-        ingredients: addrecipe.ingredients,
-        procedure: addrecipe.procedure,
-        author_id: addrecipe.author_id,
-      });
-
-      console.log(addrecipe);
-      navigate("/main/user");
-      navigate(0);
+      axios
+        .put(url, {
+          id: addrecipe.id,
+          recipeName: addrecipe.recipeName,
+          image: addrecipe.image,
+          category: addrecipe.category,
+          authorName: addrecipe.authorName,
+          cookingTime: addrecipe.cookingTime,
+          noOfServings: addrecipe.noOfServings,
+          about: addrecipe.about,
+          ingredients: addrecipe.ingredients,
+          procedure: addrecipe.procedure,
+          author_id: addrecipe.author_id,
+        })
+        .then((res) => {
+          console.log(addrecipe);
+          console.log(res);
+          navigate("/main/user");
+          navigate(0);
+        });
     }
   }, [formErrors]);
 

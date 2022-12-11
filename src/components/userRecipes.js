@@ -9,9 +9,11 @@ function UserRecipes({ userid }) {
   console.log(userid);
   const [recipes, setRecipe] = useState([]);
   useEffect(() => {
-    axios.get("https://safe-beach-82078.herokuapp.com/recipes").then((res) => {
-      setRecipe(res.data);
-    });
+    axios
+      .get("https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes")
+      .then((res) => {
+        setRecipe(res.data);
+      });
   }, []);
   const handleUpdate = (id) => {
     localStorage.setItem("ID", id);
@@ -19,10 +21,12 @@ function UserRecipes({ userid }) {
   };
   const handledelete = (id) => {
     axios
-      .delete(`https://safe-beach-82078.herokuapp.com/recipes/${id}`)
+      .delete(
+        `https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes/${id}`
+      )
       .then(() => {
         axios
-          .get("https://safe-beach-82078.herokuapp.com/recipes")
+          .get("https://nbp-backend-dce6f6jtu-mvamsi053.vercel.app/recipes")
           .then((res) => {
             setRecipe(res.data);
           });
