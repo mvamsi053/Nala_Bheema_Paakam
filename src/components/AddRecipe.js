@@ -45,7 +45,6 @@ function AddRecipe({ user, recipeData }) {
       isSubmit &&
       addrecipe.author_id
     ) {
-<<<<<<< HEAD
       axios
         .post(url, {
           id: addrecipe.id,
@@ -67,26 +66,6 @@ function AddRecipe({ user, recipeData }) {
         });
 
       console.log(addrecipe);
-=======
-      axios.post(url, {
-        id: addrecipe.id,
-        recipeName: addrecipe.recipeName,
-        image: addrecipe.image,
-        category: addrecipe.category,
-        authorName: addrecipe.authorName,
-        cookingTime: addrecipe.cookingTime,
-        noOfServings: addrecipe.noOfServings,
-        about: addrecipe.about,
-        ingredients: addrecipe.ingredients,
-        procedure: addrecipe.procedure,
-        author_id: addrecipe.author_id,
-      }).then((res) => {
-          console.log(res);
-          navigate("/main/user");
-          navigate(0);
-        });   
-
->>>>>>> 0068d248851d9b9597afae45aa48446e23ca3d47
     }
   }, [formErrors]);
 
